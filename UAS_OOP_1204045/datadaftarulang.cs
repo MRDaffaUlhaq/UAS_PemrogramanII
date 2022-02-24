@@ -31,7 +31,7 @@ namespace UAS_OOP_1204045
             cmd1 = new SqlCommand();
             cmd1.Connection = conn;
             cmd1.CommandType = CommandType.Text;
-            cmd1.CommandText = "select * from tr_daftar_ulang";
+            cmd1.CommandText = "SELECT ms_mhs.npm,nama_mhs,nama_prodi,grade,total_biaya FROM ms_mhs JOIN ms_prodi ON ms_mhs.kode_prodi=ms_prodi.kode_prodi JOIN tr_daftar_ulang ON ms_mhs.npm=tr_daftar_ulang.npm";
             ds = new DataSet();
             da = new SqlDataAdapter(cmd1);
             da.Fill(ds, "tr_daftar_ulang");
