@@ -45,15 +45,16 @@
             this.label15 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.npmTB = new System.Windows.Forms.TextBox();
+            this.namamhsTB = new System.Windows.Forms.TextBox();
+            this.prodiTB = new System.Windows.Forms.TextBox();
+            this.biayaTB = new System.Windows.Forms.TextBox();
+            this.rbA = new System.Windows.Forms.RadioButton();
+            this.rbB = new System.Windows.Forms.RadioButton();
+            this.rbC = new System.Windows.Forms.RadioButton();
+            this.potonganTB = new System.Windows.Forms.TextBox();
+            this.totalTB = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -200,6 +201,7 @@
             this.button1.TabIndex = 15;
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -209,96 +211,115 @@
             this.button2.TabIndex = 16;
             this.button2.Text = "Clear";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox1
+            // npmTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(371, 111);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 23);
-            this.textBox1.TabIndex = 17;
+            this.npmTB.Location = new System.Drawing.Point(371, 111);
+            this.npmTB.Name = "npmTB";
+            this.npmTB.Size = new System.Drawing.Size(182, 23);
+            this.npmTB.TabIndex = 17;
             // 
-            // textBox2
+            // namamhsTB
             // 
-            this.textBox2.Location = new System.Drawing.Point(371, 142);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(182, 23);
-            this.textBox2.TabIndex = 18;
+            this.namamhsTB.Enabled = false;
+            this.namamhsTB.Location = new System.Drawing.Point(371, 142);
+            this.namamhsTB.Name = "namamhsTB";
+            this.namamhsTB.Size = new System.Drawing.Size(182, 23);
+            this.namamhsTB.TabIndex = 18;
             // 
-            // textBox3
+            // prodiTB
             // 
-            this.textBox3.Location = new System.Drawing.Point(371, 171);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(182, 23);
-            this.textBox3.TabIndex = 19;
+            this.prodiTB.Enabled = false;
+            this.prodiTB.Location = new System.Drawing.Point(371, 171);
+            this.prodiTB.Name = "prodiTB";
+            this.prodiTB.Size = new System.Drawing.Size(182, 23);
+            this.prodiTB.TabIndex = 19;
             // 
-            // textBox4
+            // biayaTB
             // 
-            this.textBox4.Location = new System.Drawing.Point(371, 204);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(182, 23);
-            this.textBox4.TabIndex = 20;
+            this.biayaTB.Enabled = false;
+            this.biayaTB.Location = new System.Drawing.Point(371, 204);
+            this.biayaTB.Name = "biayaTB";
+            this.biayaTB.Size = new System.Drawing.Size(182, 23);
+            this.biayaTB.TabIndex = 20;
             // 
-            // radioButton1
+            // rbA
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(371, 239);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(33, 19);
-            this.radioButton1.TabIndex = 21;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "A";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbA.AutoSize = true;
+            this.rbA.Location = new System.Drawing.Point(371, 239);
+            this.rbA.Name = "rbA";
+            this.rbA.Size = new System.Drawing.Size(33, 19);
+            this.rbA.TabIndex = 21;
+            this.rbA.TabStop = true;
+            this.rbA.Text = "A";
+            this.rbA.UseVisualStyleBackColor = true;
+            this.rbA.MouseClick += new System.Windows.Forms.MouseEventHandler(this.rbA_MouseClick);
             // 
-            // radioButton2
+            // rbB
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(371, 264);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(32, 19);
-            this.radioButton2.TabIndex = 22;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "B";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbB.AutoSize = true;
+            this.rbB.Location = new System.Drawing.Point(371, 264);
+            this.rbB.Name = "rbB";
+            this.rbB.Size = new System.Drawing.Size(32, 19);
+            this.rbB.TabIndex = 22;
+            this.rbB.TabStop = true;
+            this.rbB.Text = "B";
+            this.rbB.UseVisualStyleBackColor = true;
+            this.rbB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.rbB_MouseClick);
             // 
-            // radioButton3
+            // rbC
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(371, 289);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(33, 19);
-            this.radioButton3.TabIndex = 23;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "C";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbC.AutoSize = true;
+            this.rbC.Location = new System.Drawing.Point(371, 289);
+            this.rbC.Name = "rbC";
+            this.rbC.Size = new System.Drawing.Size(33, 19);
+            this.rbC.TabIndex = 23;
+            this.rbC.TabStop = true;
+            this.rbC.Text = "C";
+            this.rbC.UseVisualStyleBackColor = true;
+            this.rbC.MouseClick += new System.Windows.Forms.MouseEventHandler(this.rbC_MouseClick);
             // 
-            // textBox5
+            // potonganTB
             // 
-            this.textBox5.Location = new System.Drawing.Point(371, 326);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(182, 23);
-            this.textBox5.TabIndex = 24;
+            this.potonganTB.Location = new System.Drawing.Point(371, 326);
+            this.potonganTB.Name = "potonganTB";
+            this.potonganTB.ReadOnly = true;
+            this.potonganTB.Size = new System.Drawing.Size(182, 23);
+            this.potonganTB.TabIndex = 24;
             // 
-            // textBox6
+            // totalTB
             // 
-            this.textBox6.Location = new System.Drawing.Point(371, 359);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(182, 23);
-            this.textBox6.TabIndex = 25;
+            this.totalTB.Location = new System.Drawing.Point(371, 359);
+            this.totalTB.Name = "totalTB";
+            this.totalTB.Size = new System.Drawing.Size(182, 23);
+            this.totalTB.TabIndex = 25;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(559, 111);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(111, 23);
+            this.button3.TabIndex = 26;
+            this.button3.Text = "Cari Mahasiswa";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // daftarulang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 469);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.totalTB);
+            this.Controls.Add(this.potonganTB);
+            this.Controls.Add(this.rbC);
+            this.Controls.Add(this.rbB);
+            this.Controls.Add(this.rbA);
+            this.Controls.Add(this.biayaTB);
+            this.Controls.Add(this.prodiTB);
+            this.Controls.Add(this.namamhsTB);
+            this.Controls.Add(this.npmTB);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label15);
@@ -342,14 +363,15 @@
         private Label label15;
         private Button button1;
         private Button button2;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
-        private RadioButton radioButton3;
-        private TextBox textBox5;
-        private TextBox textBox6;
+        private TextBox npmTB;
+        private TextBox namamhsTB;
+        private TextBox prodiTB;
+        private TextBox biayaTB;
+        private RadioButton rbA;
+        private RadioButton rbB;
+        private RadioButton rbC;
+        private TextBox potonganTB;
+        private TextBox totalTB;
+        private Button button3;
     }
 }

@@ -68,74 +68,81 @@ namespace UAS_OOP_1204045
 
         private void submitmhs_Click_1(object sender, EventArgs e)
         {
-            if (npmTB.Text != "" && npmTB.TextLength == 7)
+            int i = 0;
+            //MessageBox.Show(int.TryParse(npmTB.Text.ToString(), out i).ToString(), "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            if (npmTB.Text != "" && int.TryParse(npmTB.Text.ToString(), out i))
             {
-                if (namamhs.Text != "")
+                if (npmTB.Text != "" && npmTB.TextLength == 7)
                 {
-
-
-                    if (prodicombobox.Text != "- Pilih Program Studi -")
+                    if (namamhs.Text != "")
                     {
-                        string npm = npmTB.Text;
-                        string nama = namamhs.Text;
-                        string prodi = this.prodi;
 
-                        SqlConnection conn = new SqlConnection(@"Data Source=DAUL-DESK;Initial Catalog=UAS;Integrated Security=True");
-
-                        string sql = "insert into ms_mhs ([npm], [nama_mhs], " +
-                            " [kode_prodi]) values(@npm,@nama_mhs,@kode_prodi)";
-
-                        using (SqlConnection cnn = new SqlConnection(@"Data Source=DAUL-DESK;Initial Catalog=UAS;Integrated Security=True"))
+                        if (prodicombobox.Text != "- Pilih Program Studi -")
                         {
-                            try
+                            string npm = npmTB.Text;
+                            string nama = namamhs.Text;
+                            string prodi = this.prodi;
+
+                            SqlConnection conn = new SqlConnection(@"Data Source=DAUL-DESK;Initial Catalog=UAS;Integrated Security=True");
+
+                            string sql = "insert into ms_mhs ([npm], [nama_mhs], " +
+                                " [kode_prodi]) values(@npm,@nama_mhs,@kode_prodi)";
+
+                            using (SqlConnection cnn = new SqlConnection(@"Data Source=DAUL-DESK;Initial Catalog=UAS;Integrated Security=True"))
                             {
-                                cnn.Open();
-
-                                using (SqlCommand cmd = new SqlCommand(sql, cnn))
+                                try
                                 {
-                                    cmd.Parameters.Add("@npm", SqlDbType.NVarChar).Value = npm;
-                                    cmd.Parameters.Add("@nama_mhs", SqlDbType.NVarChar).Value = nama;
-                                    cmd.Parameters.Add("@kode_prodi", SqlDbType.NVarChar).Value = prodi;
+                                    cnn.Open();
 
-                                    int rowsAdded = cmd.ExecuteNonQuery();
-                                    if (rowsAdded > 0)
-                                        MessageBox.Show("Data berhasil disimpan");
-                                    else
-                                        MessageBox.Show("Tidak ada data yang disimpan");
+                                    using (SqlCommand cmd = new SqlCommand(sql, cnn))
+                                    {
+                                        cmd.Parameters.Add("@npm", SqlDbType.NVarChar).Value = npm;
+                                        cmd.Parameters.Add("@nama_mhs", SqlDbType.NVarChar).Value = nama;
+                                        cmd.Parameters.Add("@kode_prodi", SqlDbType.NVarChar).Value = prodi;
 
+                                        int rowsAdded = cmd.ExecuteNonQuery();
+                                        if (rowsAdded > 0)
+                                            MessageBox.Show("Data berhasil disimpan");
+                                        else
+                                            MessageBox.Show("Tidak ada data yang disimpan");
+
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+                                    MessageBox.Show("ERROR:" + ex.Message);
                                 }
                             }
-                            catch (Exception ex)
-                            {
-                                MessageBox.Show("ERROR:" + ex.Message);
-                            }
+
+                        }
+                        else
+                        {
+                            MessageBox.Show
+                                        ("Prodi belum diisi!",
+                                        "Informasi Data Submit",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
 
                     }
                     else
                     {
                         MessageBox.Show
-                                    ("Prodi belum diisi!",
+                                    ("Nama belum diisi!",
                                     "Informasi Data Submit",
                                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-
                 }
+            }
+                
                 else
                 {
                     MessageBox.Show
-                                ("Nama belum diisi!",
+                                ("NPM belum diisi dan tidak boleh mengandung huruf!",
                                 "Informasi Data Submit",
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            }
-            else
-            {
-                MessageBox.Show
-                            ("NPM belum diisi!",
-                            "Informasi Data Submit",
-                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            
         }
     }
 }

@@ -51,5 +51,34 @@ namespace UAS_OOP_1204045
             datamhs.MdiParent = this;
             datamhs.Show();
         }
+
+        private void kelolaDataProdiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UDprodi kelolaprodi = new UDprodi();
+            kelolaprodi.MdiParent = this;
+            kelolaprodi.Show();
+        }
+
+        private void kelolaDataMahasiswaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UDmhs kelolamhs = new UDmhs();
+            kelolamhs.MdiParent = this;
+            kelolamhs.Show();
+        }
+
+
+        private void kelolaDataDaftarUlangToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            daftarulangView kelolamhs = new daftarulangView();
+            kelolamhs.MdiParent = this;
+            kelolamhs.Show();
+        }
+
+        private void dataLaporanDaftarUlangMahasiswaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            datadaftarulang kelolamhs = new datadaftarulang();
+            kelolamhs.MdiParent = this;
+            kelolamhs.Show();
+        }
     }
 }

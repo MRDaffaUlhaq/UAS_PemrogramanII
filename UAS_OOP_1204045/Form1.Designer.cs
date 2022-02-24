@@ -34,11 +34,16 @@
             this.mahasiswaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prodiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSplitButton2 = new System.Windows.Forms.ToolStripSplitButton();
             this.dataMahasiswaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataProdiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSplitButton3 = new System.Windows.Forms.ToolStripSplitButton();
+            this.kelolaDataMahasiswaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kelolaDataProdiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kelolaDataDaftarUlangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
+            this.dataLaporanDaftarUlangMahasiswaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +54,7 @@
             this.toolStripLabel2,
             this.toolStripSplitButton2,
             this.toolStripLabel3,
+            this.toolStripSplitButton3,
             this.toolStripLabel4});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -89,25 +95,13 @@
             this.toolStripLabel2.Text = "View";
             this.toolStripLabel2.Click += new System.EventHandler(this.toolStripLabel2_Click);
             // 
-            // toolStripLabel3
-            // 
-            this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(45, 22);
-            this.toolStripLabel3.Text = "Update";
-            // 
-            // toolStripLabel4
-            // 
-            this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(54, 22);
-            this.toolStripLabel4.Text = "Transaksi";
-            this.toolStripLabel4.Click += new System.EventHandler(this.toolStripLabel4_Click);
-            // 
             // toolStripSplitButton2
             // 
             this.toolStripSplitButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.None;
             this.toolStripSplitButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dataMahasiswaToolStripMenuItem,
-            this.dataProdiToolStripMenuItem});
+            this.dataProdiToolStripMenuItem,
+            this.dataLaporanDaftarUlangMahasiswaToolStripMenuItem});
             this.toolStripSplitButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton2.Image")));
             this.toolStripSplitButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButton2.Name = "toolStripSplitButton2";
@@ -117,16 +111,70 @@
             // dataMahasiswaToolStripMenuItem
             // 
             this.dataMahasiswaToolStripMenuItem.Name = "dataMahasiswaToolStripMenuItem";
-            this.dataMahasiswaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dataMahasiswaToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.dataMahasiswaToolStripMenuItem.Text = "Data Mahasiswa";
             this.dataMahasiswaToolStripMenuItem.Click += new System.EventHandler(this.dataMahasiswaToolStripMenuItem_Click);
             // 
             // dataProdiToolStripMenuItem
             // 
             this.dataProdiToolStripMenuItem.Name = "dataProdiToolStripMenuItem";
-            this.dataProdiToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dataProdiToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
             this.dataProdiToolStripMenuItem.Text = "Data Prodi";
             this.dataProdiToolStripMenuItem.Click += new System.EventHandler(this.dataProdiToolStripMenuItem_Click);
+            // 
+            // toolStripLabel3
+            // 
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(45, 22);
+            this.toolStripLabel3.Text = "Update";
+            // 
+            // toolStripSplitButton3
+            // 
+            this.toolStripSplitButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.None;
+            this.toolStripSplitButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.kelolaDataMahasiswaToolStripMenuItem,
+            this.kelolaDataProdiToolStripMenuItem,
+            this.kelolaDataDaftarUlangToolStripMenuItem});
+            this.toolStripSplitButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton3.Image")));
+            this.toolStripSplitButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton3.Name = "toolStripSplitButton3";
+            this.toolStripSplitButton3.Size = new System.Drawing.Size(16, 22);
+            this.toolStripSplitButton3.Text = "toolStripSplitButton3";
+            // 
+            // kelolaDataMahasiswaToolStripMenuItem
+            // 
+            this.kelolaDataMahasiswaToolStripMenuItem.Name = "kelolaDataMahasiswaToolStripMenuItem";
+            this.kelolaDataMahasiswaToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.kelolaDataMahasiswaToolStripMenuItem.Text = "Kelola Data Mahasiswa";
+            this.kelolaDataMahasiswaToolStripMenuItem.Click += new System.EventHandler(this.kelolaDataMahasiswaToolStripMenuItem_Click);
+            // 
+            // kelolaDataProdiToolStripMenuItem
+            // 
+            this.kelolaDataProdiToolStripMenuItem.Name = "kelolaDataProdiToolStripMenuItem";
+            this.kelolaDataProdiToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.kelolaDataProdiToolStripMenuItem.Text = "Kelola Data Prodi";
+            this.kelolaDataProdiToolStripMenuItem.Click += new System.EventHandler(this.kelolaDataProdiToolStripMenuItem_Click);
+            // 
+            // kelolaDataDaftarUlangToolStripMenuItem
+            // 
+            this.kelolaDataDaftarUlangToolStripMenuItem.Name = "kelolaDataDaftarUlangToolStripMenuItem";
+            this.kelolaDataDaftarUlangToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.kelolaDataDaftarUlangToolStripMenuItem.Text = "Kelola Data Daftar Ulang";
+            this.kelolaDataDaftarUlangToolStripMenuItem.Click += new System.EventHandler(this.kelolaDataDaftarUlangToolStripMenuItem_Click);
+            // 
+            // toolStripLabel4
+            // 
+            this.toolStripLabel4.Name = "toolStripLabel4";
+            this.toolStripLabel4.Size = new System.Drawing.Size(54, 22);
+            this.toolStripLabel4.Text = "Transaksi";
+            this.toolStripLabel4.Click += new System.EventHandler(this.toolStripLabel4_Click);
+            // 
+            // dataLaporanDaftarUlangMahasiswaToolStripMenuItem
+            // 
+            this.dataLaporanDaftarUlangMahasiswaToolStripMenuItem.Name = "dataLaporanDaftarUlangMahasiswaToolStripMenuItem";
+            this.dataLaporanDaftarUlangMahasiswaToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.dataLaporanDaftarUlangMahasiswaToolStripMenuItem.Text = "Data Laporan Daftar Ulang Mahasiswa";
+            this.dataLaporanDaftarUlangMahasiswaToolStripMenuItem.Click += new System.EventHandler(this.dataLaporanDaftarUlangMahasiswaToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -156,5 +204,10 @@
         private ToolStripSplitButton toolStripSplitButton2;
         private ToolStripMenuItem dataMahasiswaToolStripMenuItem;
         private ToolStripMenuItem dataProdiToolStripMenuItem;
+        private ToolStripSplitButton toolStripSplitButton3;
+        private ToolStripMenuItem kelolaDataMahasiswaToolStripMenuItem;
+        private ToolStripMenuItem kelolaDataProdiToolStripMenuItem;
+        private ToolStripMenuItem kelolaDataDaftarUlangToolStripMenuItem;
+        private ToolStripMenuItem dataLaporanDaftarUlangMahasiswaToolStripMenuItem;
     }
 }

@@ -57,18 +57,6 @@ namespace UAS_OOP_1204045
             kode_prodi.Text = newKode;
         }
 
-        private void SubmitProdi_Click(object sender, EventArgs e)
-        {
-
-
-            string myCmd = "INSERT INTO ms_prodi VALUES('"
-            + kode_prodi.Text + "','"
-            + namaprodi.Text + "','"
-            + singkatan.Text + "','"
-            + biayakuliah.Text + "')";
-
-            UpdateDB(myCmd);
-        }
 
         private void UpdateDB(string cmd)
         {
@@ -89,13 +77,6 @@ namespace UAS_OOP_1204045
             }
         }
 
-        private void Clear_Click(object sender, EventArgs e)
-        {
-            namaprodi.Text = "";
-            singkatan.Text = "";
-            biayakuliah.Text = "";
-
-        }
 
         private void biayakuliah_TextChanged(object sender, EventArgs e)
         {
@@ -127,13 +108,25 @@ namespace UAS_OOP_1204045
 
         private void submit_Click(object sender, EventArgs e)
         {
-            string myCmd = "INSERT INTO ms_prodi VALUES('"
-           + kode_prodi.Text + "','"
-           + namaprodi.Text + "','"
-           + singkatan.Text + "','"
-           + biayakuliah.Text + "')";
+            int i = 0;
+            if (biayakuliah.Text != "" && int.TryParse(biayakuliah.Text.ToString(), out i))
+            {
+                string myCmd = "INSERT INTO ms_prodi VALUES('"
+                          + kode_prodi.Text + "','"
+                          + namaprodi.Text + "','"
+                          + singkatan.Text + "','"
+                          + biayakuliah.Text + "')";
 
-            UpdateDB(myCmd);
+                UpdateDB(myCmd);
+            }
+            else
+            {
+                MessageBox.Show
+                            ("Biaya kuliah tidak boleh mengandung huruf!",
+                            "Informasi Data Submit",
+                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
 
         private void button2_Click(object sender, EventArgs e)
